@@ -1,0 +1,22 @@
+// script.js
+
+// إضافة رقم أو عملية إلى الشاشة
+function appendValue(value) {
+    const display = document.getElementById('display');
+    display.value += value;
+}
+
+// مسح الشاشة
+function clearDisplay() {
+    document.getElementById('display').value = '';
+}
+
+// حساب النتيجة
+function calculateResult() {
+    const display = document.getElementById('display');
+    try {
+        display.value = eval(display.value); // تجنب استخدام eval في المشاريع الحقيقية
+    } catch (error) {
+        display.value = 'خطأ';
+    }
+}
